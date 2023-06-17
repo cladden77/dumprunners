@@ -1,0 +1,45 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.navbar {
+  background-color: map-get($theme-colors, "offWhite");
+  // box-shadow: 0 3px 8px #000;
+  z-index: 10;
+  top: 0;
+}
+
+.menu-primary_navigation-container {
+  @include media-breakpoint-down(sm) {
+    margin: auto;
+  }
+}
+
+.navbar-brand {
+  color: map-get($theme-colors, "primary");
+
+  @include media-breakpoint-down(sm) {
+    width: inherit;
+  }
+
+  img {
+    display: block;
+    max-width: 60%;
+    margin: auto;
+  }
+
+  &:hover {
+    color: map-get($theme-colors, "secondary");
+  }
+}
+
+.banner .nav a {
+  @extend .nav-link;
+
+  color: map-get($theme-colors, "primary");
+  text-transform: uppercase;
+
+  &:hover {
+    color: map-get($theme-colors, "secondary");
+  }
+}
